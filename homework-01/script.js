@@ -1,9 +1,10 @@
-let tomatoPrice = 15.678;
-let potatoPrice = 123.965;
-let bananaPrice = 90.2345;
+const TOMATO_PRICE = 15.678;
+const POTATO_PRICE = 123.965;
+const BANANA_PRICE = 90.2345;
+const MY_MONEY = 500;
 
 
-let allPrices = [tomatoPrice, potatoPrice, bananaPrice];
+let allPrices = [TOMATO_PRICE, POTATO_PRICE, BANANA_PRICE];
 let reducer = (accumulator, currentValue) => accumulator + currentValue;
 
 
@@ -25,7 +26,7 @@ let getAmountWithoutCents = (pricesArray) =>{
 }
 console.log(getAmountWithoutCents(allPrices));
 
-let amountToHundreds = Math.round(totalAmount/100)*100;
+let amountToHundreds = Math.ceil(totalAmount/100)*100;
 console.log(amountToHundreds);
 
 let evenOddNumber = (sum) =>{
@@ -35,7 +36,7 @@ let evenOddNumber = (sum) =>{
 
 console.log(evenOddNumber(totalAmount));
 
-let shortChange = 500 - totalAmount;
+let shortChange = MY_MONEY - totalAmount;
 console.log(shortChange);
 
 let averagePrice = (array) =>{
