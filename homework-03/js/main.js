@@ -1,0 +1,150 @@
+//1
+const getMaxDigit = (number) =>{
+    let numbersArray = String(number).split('');
+    let maxDigit = 0;
+    numbersArray.map(e => {
+        if(parseInt(e) > maxDigit){
+            maxDigit = parseInt(e);
+        }
+    })
+    return maxDigit
+}
+
+//2
+const getValueToPow = (number, pow) =>{
+    let result = number;
+    if(pow === 0){
+        result = 1;
+    }
+    else if(pow < 0){
+        for(let i = 1; i < -1*pow; i++){
+            result *= number;
+        }
+        result = 1/result;
+    }
+    else{
+        for(let i = 1; i < pow; i++){
+            result *= number;
+        }
+    }
+    return result
+}
+
+//3
+const normalizeName = (name) =>{
+    if(typeof name === 'string'){
+        let nameToFix = name.toLowerCase();
+        nameToFix[0].toUpperCase();
+        return nameToFix[0].toUpperCase() + nameToFix.slice(1);
+    }
+    else{
+        return 'Error: Check input values'
+    }
+}
+
+//4
+const getPriceWithoutTax = (price, tax) => {
+    if(isNaN(price) || isNaN(tax)){
+        return 'Error: Check input values'
+    }
+    else{
+        return price - ((price*tax)/100)
+    }
+}
+
+//5
+const getRandomNumber = (minValue, maxValue) =>{
+    if(isNaN(minValue) || isNaN(maxValue)){
+        return 'Error: Check input values'
+    }
+    else{
+        return Math.round(Math.random() * (maxValue - minValue)) + minValue
+    }
+}
+
+//6
+const countLetter = (letter, word) =>{
+    if((typeof letter && typeof word) === 'string'){
+        let count = 0;
+        for(let i = 0; i < word.length; i++){
+            if(letter === word.toLowerCase()[i]){
+                count++
+            }
+        }
+        return count;
+    }
+    else{
+        return 'Error: Check input values'
+    }
+}
+
+//7
+const convertCurrency = (amount, currency) =>{
+    let USD = 27.5;
+    if(currency.toLowerCase() === 'uah'){
+        return amount * 27.5 + currency;
+    }
+    else if(currency === '$'){
+        return (amount/USD).toFixed(2) + currency;
+    }
+    else{
+        return 'Error: Check input values';
+    }
+}
+
+//8
+const getRandomPassword = (passwordLength = 8) =>{
+    if(!isNaN(passwordLength) &&  passwordLength > 0){
+        let password = [];
+        for(let i = 0; i < passwordLength; i++){
+            password[i] = +(Math.floor(Math.random() * 10)).toFixed(0);
+        }
+        return password.join('');
+    }
+    else{
+        return 'Error: Check input values';
+    }
+}
+
+//9
+const deleteLetters = (letter, sentence) =>{
+    if((typeof letter === 'string' || typeof letter === 'number') && (typeof sentence === 'string' || typeof sentence === 'number')){
+        let removedLetter = new RegExp(letter, 'g');
+        return String(sentence).toLowerCase().replace(removedLetter, '');
+    }
+    else{
+        return 'Error: Check input values';
+    }
+}
+
+//10
+const isPalyndrom = (sentence) =>{
+    if(typeof sentence === 'string'){
+        let oldSentence = sentence.toLowerCase().replace(/\s/g, '');
+        let newSentence = oldSentence.split('').reverse().join('');
+        if(oldSentence === newSentence){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    else{
+        return 'Error: Check input values';
+    }
+}
+
+//11
+const deleteDuplicateLetter = (sentence) =>{
+    
+    if(typeof sentence === 'string'){
+        let lettersArray = sentence.toLowerCase().split('');
+        let result = lettersArray.filter((el, i, array) => {
+            return array.lastIndexOf(el) === array.indexOf(el);
+        });
+        return result.join('')
+    }
+    else{
+        return 'Error: Check input values';
+    }
+}
