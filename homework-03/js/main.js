@@ -79,13 +79,16 @@ const countLetter = (letter, word) =>{
 }
 
 //7
-const convertCurrency = (amount, currency) =>{
+const convertCurrency = (amount) =>{
     let USD = 27.5;
-    if(currency.toLowerCase() === 'uah'){
-        return amount * 27.5 + currency;
+    if(amount.match(/uah/gi)){
+        return (amount
+            .toLowerCase()
+            .split('uah')[0]/USD)
+            .toFixed(2) + '$';
     }
-    else if(currency === '$'){
-        return (amount/USD).toFixed(2) + currency;
+    else if(amount.match(/$$/)){
+        return amount.split('$')[0] * USD + 'UAH';
     }
     else{
         return 'Error: Check input values';
@@ -148,3 +151,15 @@ const deleteDuplicateLetter = (sentence) =>{
         return 'Error: Check input values';
     }
 }
+
+document.writeln(`<p>Функція №1: ${getMaxDigit(98274651)}</p>`);
+document.writeln(`<p>Функція №2: ${getValueToPow(2,3)}</p>`);
+document.writeln(`<p>Функція №3: ${normalizeName('liubomyr')}</p>`);
+document.writeln(`<p>Функція №4: ${getPriceWithoutTax(100, 19.5)}</p>`);
+document.writeln(`<p>Функція №5: ${getRandomNumber(0,1000000)}</p>`);
+document.writeln(`<p>Функція №6: ${countLetter('a', 'blablabla')}</p>`);
+document.writeln(`<p>Функція №7: ${convertCurrency('100UAH')}</p>`);
+document.writeln(`<p>Функція №8: ${getRandomPassword()}</p>`);
+document.writeln(`<p>Функція №9: ${deleteLetters('a', 'blablabla')}</p>`);
+document.writeln(`<p>Функція №10: ${isPalyndrom('Я несу гусеня')}</p>`);
+document.writeln(`<p>Функція №11: ${deleteDuplicateLetter('Бісквіт був дуже ніжним')}</p>`);
