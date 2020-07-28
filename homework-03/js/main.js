@@ -37,9 +37,7 @@ const normalizeName = (name) =>{
         nameToFix[0].toUpperCase();
         return nameToFix[0].toUpperCase() + nameToFix.slice(1);
     }
-    else{
-        return 'Error: Check input values'
-    }
+    return 'Error: Check input values'
 }
 
 //4
@@ -47,9 +45,7 @@ const getPriceWithoutTax = (price, tax) => {
     if(isNaN(price) || isNaN(tax)){
         return 'Error: Check input values'
     }
-    else{
-        return price - ((price*tax)/100)
-    }
+    return price - ((price*tax)/100)
 }
 
 //5
@@ -57,9 +53,7 @@ const getRandomNumber = (minValue, maxValue) =>{
     if(isNaN(minValue) || isNaN(maxValue)){
         return 'Error: Check input values'
     }
-    else{
-        return Math.round(Math.random() * (maxValue - minValue)) + minValue
-    }
+    return Math.round(Math.random() * (maxValue - minValue)) + minValue
 }
 
 //6
@@ -73,9 +67,7 @@ const countLetter = (letter, word) =>{
         }
         return count;
     }
-    else{
-        return 'Error: Check input values'
-    }
+    return 'Error: Check input values'
 }
 
 //7
@@ -90,9 +82,7 @@ const convertCurrency = (amount) =>{
     else if(amount.match(/$$/)){
         return amount.split('$')[0] * USD + 'UAH';
     }
-    else{
-        return 'Error: Check input values';
-    }
+    return 'Error: Check input values';
 }
 
 //8
@@ -104,9 +94,7 @@ const getRandomPassword = (passwordLength = 8) =>{
         }
         return password.join('');
     }
-    else{
-        return 'Error: Check input values';
-    }
+    return 'Error: Check input values';
 }
 
 //9
@@ -115,9 +103,7 @@ const deleteLetters = (letter, sentence) =>{
         let removedLetter = new RegExp(letter, 'g');
         return String(sentence).toLowerCase().replace(removedLetter, '');
     }
-    else{
-        return 'Error: Check input values';
-    }
+    return 'Error: Check input values';
 }
 
 //10
@@ -132,14 +118,11 @@ const isPalyndrom = (sentence) =>{
             return false;
         }
     }
-    else{
-        return 'Error: Check input values';
-    }
+    return 'Error: Check input values';
 }
 
 //11
 const deleteDuplicateLetter = (sentence) =>{
-    
     if(typeof sentence === 'string'){
         let lettersArray = sentence.toLowerCase().split('');
         let result = lettersArray.filter((el, i, array) => {
@@ -147,9 +130,7 @@ const deleteDuplicateLetter = (sentence) =>{
         });
         return result.join('')
     }
-    else{
-        return 'Error: Check input values';
-    }
+    return 'Error: Check input values';
 }
 
 document.writeln(`<p>Функція №1: ${getMaxDigit(98274651)}</p>`);
