@@ -1,5 +1,4 @@
-// const numbers = [-1, -2, 3, 10, 2, 2.33, 3, 5, 55, 3]
-const numbers =[6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2]
+const numbers = [-1, -2, 3, 10, 2, 2.33, 3, 5, 55, 3]
 //1
 const getRandomArray = (length, min, max) =>{
     let arr = [];
@@ -27,7 +26,7 @@ const getAverage = (...numbers) =>{
 console.log(getAverage(...numbers))
 //4
 const getMedian = (...numbers) =>{
-    let sortedNumbers =  numbers.filter(el => el%1 === 0).sort();
+    let sortedNumbers =  numbers.filter(el => el%1 === 0).sort((a,b)=>a-b);
     let middlePos = sortedNumbers.length/2;
     if(sortedNumbers.length % 2){
         return sortedNumbers[Math.floor(middlePos)];
