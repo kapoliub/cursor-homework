@@ -1,29 +1,59 @@
-.main__block{
-    padding: 30px;
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+html {
+	height: 100%;
 }
 
-.main__block .list-group{
-    padding-right: 0;
+body {
+	font-family: 'Fjalla One', sans-serif;
+	background: linear-gradient(to bottom, #405166 0%, #656f6f 50%,#405166  100% );
 }
 
-.main__block .list-group-item{
+
+.header{
+    box-shadow: 1px 1px 0px #533d4a,2px 2px 0px #533d4a,3px 3px 0px #533d4a,4px 4px 0px #533d4a,5px 5px 0px #533d4a;
+    padding: 0;
+    background-color: #333639;
+}
+
+.header .navbar-light .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.header .user__logo{
+    border-radius: 50px;
+    width: 50px;
+}
+
+.header .user__name{
+    padding: 0 20px;
+}
+.header .dropdown-toggle{
+    border: none;
     background-color: inherit;
-    color: #f1c83c;
+    outline: none;
+    font-size: 1.2em;
+    padding: 0 20px;
+	text-shadow: #533d4a 1px 1px;
+	color: #e55643;
 }
 
-.main__block .list-group-item:hover{
-    border-left: 1px solid #533d4a;
-    border-bottom: 1px solid #533d4a;
-    border-right: 1px solid #533d4a;
-    box-shadow: inset 1px 1px 0px #533d4a,2px 2px 0px #533d4a,3px 3px 0px #533d4a;
-    transition: 0.2s;
+.header .dropdown-item img{
+    width: 20px;
+    filter: grayscale(100%);
 }
 
-.main__block .list-group-item:active{
-    left: 1px;
-    top: 1px;
+.header .dropdown-item:hover img{
+    filter: grayscale(0%);
 }
 
-@media (max-width: 410px){
-
+footer .home__button{
+    margin: 15px 0;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    letter-spacing: 2px;
 }

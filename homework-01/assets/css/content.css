@@ -1,0 +1,30 @@
+.table-dark{
+    margin: 30px 0;
+    box-shadow: 1px 1px 0px #533d4a,2px 2px 0px #533d4a,3px 3px 0px #533d4a, 4px 4px 0px #533d4a,5px 5px 0px #533d4a;
+}
+.table-dark{
+    color: #f1c83c;
+}
+
+.table-dark thead th{
+    font-size: 1.1em;
+    color: #2b9f5e;
+}
+
+.exercise__block{
+    padding-top: 30px;
+}
+
+.exercise__block h1{
+    color: #2b9f5e;
+    text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px;
+}
+
+.template__string{
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 1px 1px 0px #533d4a,2px 2px 0px #533d4a,3px 3px 0px #533d4a, 4px 4px 0px #533d4a,5px 5px 0px #533d4a;
+    text-align: center;
+    background-color: #353A3F;
+    color: #f1c83c;
+}

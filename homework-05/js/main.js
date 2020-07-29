@@ -1,4 +1,5 @@
-const numbers = [-1, -2, 3, 10, 2, 2.33, 3, 5, 55, 3]
+// const numbers = [-1, -2, 3, 10, 2, 2.33, 3, 5, 55, 3]
+const numbers =[6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2]
 //1
 const getRandomArray = (length, min, max) =>{
     let arr = [];
