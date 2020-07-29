@@ -9,7 +9,6 @@ body {
 	background: linear-gradient(to bottom, #405166 0%, #656f6f 50%,#405166  100% );
 }
 
-
 .header{
     box-shadow: 1px 1px 0px #533d4a,2px 2px 0px #533d4a,3px 3px 0px #533d4a,4px 4px 0px #533d4a,5px 5px 0px #533d4a;
     padding: 0;
@@ -26,9 +25,6 @@ body {
     width: 50px;
 }
 
-.header .user__name{
-    padding: 0 20px;
-}
 .header .dropdown-toggle{
     border: none;
     background-color: inherit;
@@ -36,7 +32,8 @@ body {
     font-size: 1.2em;
     padding: 0 20px;
 	text-shadow: #533d4a 1px 1px;
-	color: #e55643;
+    color: #e55643;
+    letter-spacing: 1.5px;
 }
 
 .header .dropdown-item img{
