@@ -108,11 +108,13 @@ footer .walking-animation {
 	height: 100vh;
 }
 
+
 footer .walking-animation .dude-wrapper {
 	position: fixed;
 	display: flex;
 	align-items: flex-end;
 	bottom: 0;
+	left: -50px;
 	animation: walking 10s linear infinite;
 }
 
@@ -121,6 +123,7 @@ footer .walking-animation .girl-wrapper {
 	display: flex;
 	align-items: flex-end;
 	bottom: 0;
+	left: -100px;
 	animation: walking 12s linear infinite;
 }
 
