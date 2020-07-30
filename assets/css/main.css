@@ -45,6 +45,21 @@ body {
     filter: grayscale(0%);
 }
 
+.content__block h1{
+    padding-top: 30px;
+    color: #2b9f5e;
+    text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px;
+    text-align: center;
+}
+
+footer.container-fluid{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 footer .home__button{
     margin: 15px 0;
     height: 60px;
