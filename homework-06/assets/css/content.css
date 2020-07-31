@@ -1,0 +1,50 @@
+.content__block .form-control,.content__block custom-select,.content__block .btn-warning{
+    height: 50px;
+}
+
+.content__block h2{
+    padding-top: 30px;
+    color: #2b9f5e;
+    text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px;
+}
+
+.content__block .card{
+    margin: 20px;
+    background-color: #333639;
+    color: #f1c83c;
+    box-shadow: 1px 1px 0px #533d4a,2px 2px 0px #533d4a,3px 3px 0px #533d4a, 4px 4px 0px #533d4a,5px 5px 0px #533d4a;
+}
+
+.content__block .student__name{
+    color: #2b9f5e;
+}
+
+.modal-title{
+    color: #2b9f5e;;
+}
+
+.modal-body{
+    color: #f1c83c;
+    font-size: 1.4em;
+}
+
+.modal-content{
+    background-color: #333639;
+}
+
+.close{
+    color: #e55643;
+    text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px;
+}
+
+.bestStudent__block h3{
+    color: #f1c83c;
+}
+
+.lettersOutput span{
+    margin-right: 10px;
+}
+
+.lettersOutput{
+    transition: 0.2s;
+}

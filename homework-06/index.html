@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #6</title>
+    <link rel="shortcut icon" href="./../assets/img/favicon.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/content.css">
+</head>
+<body>
+    <div class="container header">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <img src="./../assets/img/portrait.png"class="d-inline-block align-top user__logo" alt="user_portrait" loading="lazy">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Liubomyr Kapov
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="https://github.com/kapoliub?tab=repositories" target="_blank">
+                                <img src="./../assets/img/github-logo.png" alt="github_logo">
+                                Github
+                            </a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/liubomyr-kapov-58279819b/" target="_blank">
+                                <img src="./../assets/img/linkedin-logo.png" alt="linkedin_logo">
+                                LinkedIn
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://www.facebook.com/loui.dropson/" target="_blank">
+                                <img src="./../assets/img/facebook-logo.png" alt="facebook_logo">
+                                Facebook
+                            </a>
+                            <a class="dropdown-item" href="https://www.instagram.com/kapo.liub/" target="_blank">
+                                <img src="./../assets/img/instagram-logo.png" alt="instagram_logo">
+                                Instagram
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container content__block">
+        <div class="row">
+            <div class="col-12">
+                <h1>Homework #6 'Objects'</h1>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12">
+                <h2>Students</h2>
+            </div>
+        </div>
+        <div class="row students__block justify-content-around">
+        </div>
+        <div class="row averageMark__block text-center">
+            <div class="col-12">
+                <h2>Average mark</h2>
+            </div>
+            <div class="col-12">
+                <select class="custom-select custom-select-lg mb-3" name="averageMark" id="averageMarkSelect"></select>
+                <button class="btn btn-warning" id="getAverageMarkButton" data-toggle="modal" data-target="#modalWindow">Get average mark</button>
+            </div>
+            
+        </div>
+        <div class="row studentsInfo__block">
+            <div class="col-12 text-center">
+                <h2>Info about student</h2>
+            </div>
+            <div class="col-12 text-center">
+                <select class="custom-select custom-select-lg mb-3" name="studentInfo" id="studentInfoSelect"></select>
+                <button class="btn btn-warning" id="getStudentInfoButton"  data-toggle="modal" data-target="#modalWindow">Get student info</button>
+            </div>
+        </div>
+        <div class="row bestStudent__block">
+            <div class="col-12 text-center">
+                <h2>Best student</h2>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Calculate letters in word</h2>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="wordForCalculatingInput" placeholder="Type your word" aria-label="Recipient's username" aria-describedby="calculateLetters">
+                    <div class="input-group-append">
+                        <button class="btn btn-warning" type="button" id="calculateLetters">Button</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 lettersOutput">
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <a class="btn btn-warning w-100 home__button text-center" href="./../index.html" role="button">Return to the homepage</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
