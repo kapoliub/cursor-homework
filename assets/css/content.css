@@ -24,6 +24,10 @@
     top: 1px;
 }
 
+footer.container-fluid{
+    min-height: 150px;
+}
+
 @media (max-width: 410px){
 
 }

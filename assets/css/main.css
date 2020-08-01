@@ -54,7 +54,7 @@ body {
 
 footer.container-fluid{
     /* position: fixed; */
-    min-height: 100px;
+    min-height: 150px;
     bottom: 0;
     display: flex;
     flex-direction: column;
