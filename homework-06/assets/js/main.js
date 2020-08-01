@@ -21,7 +21,7 @@ const students = [{
         statistics: [4, 5, 5, 5, 5, 3, 4, 3, 4, 5],
         english: [5, 3],
         cosmology: [5, 5, 5, 5]
-    }
+    }  
 }];
 
 //1
@@ -73,7 +73,7 @@ const getBestStudent = (students) =>{
 //6
 const calculateWordLetters = (word) =>{
     let counts = {};
-    word.split('').map(el =>{
+    word.toLowerCase().split('').map(el =>{
         counts[el] = 1 + (counts[el] || 0);
     })
     return counts;
