@@ -1,0 +1,17 @@
+.content__block .row{
+    margin-bottom: 15px;
+}
+
+.content__block h2{
+    text-align: center;
+	color: #2b9f5e;
+	text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px;
+}
+
+.content__block input, .content__block select, .content__block button{
+    margin-bottom: 15px;
+}
+
+.content__block .alert-warning{
+    font-size: 1.2em;
+}
