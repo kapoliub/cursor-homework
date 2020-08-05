@@ -108,50 +108,65 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 alert('Choose a country');
         }
     });
-    document.querySelector('#randomSalaryUkraine').addEventListener('click', ()=>{
-        let resultField = document.querySelector('#randomSalaryResult');
-        let timer = setInterval(function getSalaryWithTimer() {
-            let resultArray = Object.keys(getMySalary.call(ukraine)).map(el =>{
-                return `${el} : ${getMySalary.call(ukraine)[el]} UAH`
-            });
-            resultField.innerHTML = resultArray.join(', ');
-            return getSalaryWithTimer;
-        }(), 10000);
-        document.querySelector('#randomSalaryStopButton').addEventListener('click', ()=>{
-            clearInterval(timer);
-            document.querySelector('#randomSalaryResult').classList.add('d-none')
-        })
+    document.querySelector('#randomSalaryUkraine').addEventListener('click', (e)=>{
+        if(document.querySelector('#randomSalaryUkraine').hasAttribute('isPressed') === false){
+            document.querySelector('#randomSalaryUkraine').setAttribute('isPressed', true);
+            document.querySelector('#randomSalaryStopButton').click();
+            let resultField = document.querySelector('#randomSalaryResult');
+            let timer = setInterval(function getSalaryWithTimer() {
+                let resultArray = Object.keys(getMySalary.call(ukraine)).map(el =>{
+                    return `${el} : ${getMySalary.call(ukraine)[el]} UAH`
+                });
+                resultField.innerHTML = resultArray.join(', ');
+                return getSalaryWithTimer;
+            }(), 10000);
+            document.querySelector('#randomSalaryStopButton').addEventListener('click', ()=>{
+                clearInterval(timer);
+                document.querySelector('#randomSalaryUkraine').removeAttribute('isPressed');
+                document.querySelector('#randomSalaryResult').classList.add('d-none');
+            })
+        }
         document.querySelector('#randomSalaryResult').classList.remove('d-none')
     });
     document.querySelector('#randomSalaryLatvia').addEventListener('click', ()=>{
-        let resultField = document.querySelector('#randomSalaryResult');
-        let timer = setInterval(function getSalaryWithTimer() {
-            let resultArray = Object.keys(getMySalary.call(latvia)).map(el =>{
-                return `${el} : ${getMySalary.call(latvia)[el]} EUR`
-            });
-            resultField.innerHTML = resultArray.join(', ');
-            return getSalaryWithTimer;
-        }(), 10000);
-        document.querySelector('#randomSalaryStopButton').addEventListener('click', ()=>{
-            clearInterval(timer);
-            document.querySelector('#randomSalaryResult').classList.add('d-none')
-        })
+        if(document.querySelector('#randomSalaryLatvia').hasAttribute('isPressed') === false){
+            document.querySelector('#randomSalaryLatvia').setAttribute('isPressed', true);
+            document.querySelector('#randomSalaryStopButton').click();
+            let resultField = document.querySelector('#randomSalaryResult');
+            let timer = setInterval(function getSalaryWithTimer() {
+                let resultArray = Object.keys(getMySalary.call(latvia)).map(el =>{
+                    return `${el} : ${getMySalary.call(latvia)[el]} UAH`
+                });
+                resultField.innerHTML = resultArray.join(', ');
+                return getSalaryWithTimer;
+            }(), 10000);
+            document.querySelector('#randomSalaryStopButton').addEventListener('click', ()=>{
+                clearInterval(timer);
+                document.querySelector('#randomSalaryLatvia').removeAttribute('isPressed');
+                document.querySelector('#randomSalaryResult').classList.add('d-none');
+            })
+        }
         document.querySelector('#randomSalaryResult').classList.remove('d-none')
     });
     document.querySelector('#randomSalaryLitva').addEventListener('click', ()=>{
-        let resultField = document.querySelector('#randomSalaryResult');
-        let timer = setInterval(function getSalaryWithTimer() {
-            let resultArray = Object.keys(getMySalary.call(litva)).map(el =>{
-                return `${el} : ${getMySalary.call(litva)[el]} EUR`
+        if(document.querySelector('#randomSalaryLitva').hasAttribute('isPressed') === false){
+            document.querySelector('#randomSalaryLitva').setAttribute('isPressed', true);
+            document.querySelector('#randomSalaryStopButton').click();
+            let resultField = document.querySelector('#randomSalaryResult');
+            let timer = setInterval(function getSalaryWithTimer() {
+                let resultArray = Object.keys(getMySalary.call(litva)).map(el =>{
+                    return `${el} : ${getMySalary.call(litva)[el]} UAH`
+                });
+                resultField.innerHTML = resultArray.join(', ');
+                return getSalaryWithTimer;
+            }(), 10000);
+            document.querySelector('#randomSalaryStopButton').addEventListener('click', ()=>{
+                clearInterval(timer);
+                document.querySelector('#randomSalaryLitva').removeAttribute('isPressed');
+                document.querySelector('#randomSalaryResult').classList.add('d-none');
             });
-            resultField.innerHTML = resultArray.join(', ');
-            return getSalaryWithTimer;
-        }(), 10000);
-        document.querySelector('#randomSalaryStopButton').addEventListener('click', ()=>{
-            clearInterval(timer);
-            document.querySelector('#randomSalaryResult').classList.add('d-none')
-        })
-        document.querySelector('#randomSalaryResult').classList.remove('d-none')
+        };
+        document.querySelector('#randomSalaryResult').classList.remove('d-none');
     });
 });
 
