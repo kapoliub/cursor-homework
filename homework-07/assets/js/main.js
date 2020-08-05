@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             let resultField = document.querySelector('#randomSalaryResult');
             let timer = setInterval(function getSalaryWithTimer() {
                 let resultArray = Object.keys(getMySalary.call(latvia)).map(el =>{
-                    return `${el} : ${getMySalary.call(latvia)[el]} UAH`
+                    return `${el} : ${getMySalary.call(latvia)[el]} EUR`
                 });
                 resultField.innerHTML = resultArray.join(', ');
                 return getSalaryWithTimer;
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             let resultField = document.querySelector('#randomSalaryResult');
             let timer = setInterval(function getSalaryWithTimer() {
                 let resultArray = Object.keys(getMySalary.call(litva)).map(el =>{
-                    return `${el} : ${getMySalary.call(litva)[el]} UAH`
+                    return `${el} : ${getMySalary.call(litva)[el]} EUR`
                 });
                 resultField.innerHTML = resultArray.join(', ');
                 return getSalaryWithTimer;
