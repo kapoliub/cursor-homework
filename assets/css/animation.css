@@ -113,6 +113,7 @@ footer .walking-animation .girl-wrapper {
 	bottom: 0;
 	left: -100px;
 	animation: walking 12s linear infinite;
+	height: 132px;
 }
 
 footer .walking-animation .dude {
