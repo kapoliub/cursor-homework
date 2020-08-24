@@ -1,0 +1,54 @@
+@font-face {
+    font-family: StarWars;
+    src: url('./../fonts/Starjedi.ttf');
+}
+
+*{
+    font-family: StarWars;
+}
+
+.content__block button{
+    border-radius: 50px;
+}
+.character-card img{
+    color: white;
+    width: 65px;
+    margin-top: 0;
+    filter: drop-shadow(0 0 5px #ff0000) drop-shadow(0 0 20px #ff0000) drop-shadow(0 0 30px #ff0000); 
+}
+
+.character-card{
+    background-color: inherit;
+    margin-bottom: 50px;
+}
+
+.character-card h2{
+    color: black;
+    text-shadow: 0 0 5px #ae01fe, 0 0 20px #ae01fe, 0 0 30px #ae01fe,0 0 20px #ae01fe;
+}
+
+.character-card h3{
+    color: black;
+    text-shadow: 0 0 5px #002fff, 0 0 20px #002fff, 0 0 30px #002fff,0 0 20px #002fff;
+}
+
+.list-group-item{
+    background-color: inherit;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.input-group *{
+    border-radius: 50px;
+}
+
+.btn-outline-warning{
+    border-radius: 50px;
+    font-size: 1em;
+}
+
+#output{
+    margin: 15px;
+}
+
