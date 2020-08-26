@@ -103,7 +103,7 @@ const showIntro = (film) =>{
 
 const getCharacters = (film) =>{
     return sendRequest(`https://swapi.dev/api/films/${film}/`)
-    .then(res => res.characters.map(sendRequest))
+    .then(res => httpToHttps(res.characters).map(sendRequest))
     .then(res => Promise.all(res))
     .then(res => res.map(el => {
         return {
@@ -114,6 +114,19 @@ const getCharacters = (film) =>{
         }
     }))
     .catch(console.log())
+}
+
+const httpToHttps = (urlArray) =>{
+    return urlArray.map(el =>{
+        let http = el.slice(0,4)
+        let url = el.slice(4)
+        if(url[0] === 's'){
+            return el;
+        }
+        else{
+            return`${http}s${url}`
+        }
+    })
 }
 
 const checkGender = (gender) => {
