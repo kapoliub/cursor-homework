@@ -13,10 +13,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 })
 
-// function* newFontGenerator(fontSize){
-//     while(true)
-//         yield fontSize += 2
-// }
 
-// const fontGenerator = newFontGenerator(14);
+let fontSize = 14;
+var fontGenerator = function *(value) {
+        if(value === 'up'){
+            ++fontSize
+        }
+        else if(value === 'down'){
+            --fontSize
+        }
+        yield value;
+}
 
+
+console.log(fontGenerator('up').next(), fontSize)
+console.log(fontGenerator('up').next(), fontSize)
+console.log(fontGenerator('up').next(), fontSize)
+console.log(fontGenerator('down').next(), fontSize)
+console.log(fontGenerator('down').next(), fontSize)
