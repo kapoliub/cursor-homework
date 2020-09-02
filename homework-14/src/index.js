@@ -18,6 +18,10 @@ function component() {
     return element;
 }
 
+document.addEventListener('DOMContentLoaded', ()=>{
+    // const func = evenOddNumber(350);
+})
+
 document.querySelector('.content__block').appendChild(component())
 
 //console.log(evenOddNumber(34621))

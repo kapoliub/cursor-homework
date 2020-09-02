@@ -28,7 +28,7 @@ resultsArray.push(getAmountWithoutCents(allPrices));
 let amountToHundreds = Math.ceil(totalAmount/100)*100;
 resultsArray.push(amountToHundreds);
 
-let evenOddNumber = (sum) =>{
+export let evenOddNumber = (sum) =>{
     let number = Math.floor(sum);
     return (number % 2 === 0)? 'even' : 'odd'
 }
